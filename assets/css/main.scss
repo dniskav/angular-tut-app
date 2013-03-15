@@ -1,0 +1,41 @@
+$standar-with : 620px;
+
+#albumImage{
+	width: $standar-with;
+	margin:{
+		bottom: 10px;
+	}
+
+	img{
+		display: block;
+		margin: auto;
+	}
+}
+
+#thumbWapper{
+	width: $standar-with;
+	overflow: auto;	
+
+	#thumbList{
+		white-space: nowrap;
+		margin: 0;
+
+		li{
+			display: inline;
+			list :{
+				style:{
+					type: none; 
+				}
+			}
+			padding:{
+				left: 2px;
+				right: 2px;
+			}
+			cursor: pointer;
+
+			&:hover{
+				opacity: 0.8;
+			}
+		}
+	}
+}

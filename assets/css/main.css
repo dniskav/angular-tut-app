@@ -1,0 +1,33 @@
+/* line 3, main.scss */
+#albumImage {
+  width: 620px;
+  margin-bottom: 10px;
+}
+/* line 9, main.scss */
+#albumImage img {
+  display: block;
+  margin: auto;
+}
+
+/* line 15, main.scss */
+#thumbWapper {
+  width: 620px;
+  overflow: auto;
+}
+/* line 19, main.scss */
+#thumbWapper #thumbList {
+  white-space: nowrap;
+  margin: 0;
+}
+/* line 23, main.scss */
+#thumbWapper #thumbList li {
+  display: inline;
+  list-style-type: none;
+  padding-left: 2px;
+  padding-right: 2px;
+  cursor: pointer;
+}
+/* line 36, main.scss */
+#thumbWapper #thumbList li:hover {
+  opacity: 0.8;
+}

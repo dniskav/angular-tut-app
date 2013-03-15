@@ -1,16 +1,36 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Angular album</title>
 
-	<script src='assets/vendor/angular.min.js'></script>
+	<script src='assets/js/vendor/angular.min.js'></script>
+	<script src='assets/js/vendor/underscore-min.js'></script>
+	<script src='assets/js/app.js'></script>
+	<link rel="stylesheet" href="assets/css/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body>
-	
-	<div ng-controller='myController'>
-		
-	</div>
+<body ng-controller="albumController">
+	<header >
+		<h2>{{currentImage.description}}</h2>
+		</header>
+		<div id="albumImage">
+			<img ng-src="{{currentImage.image}}" title="{{currentImage.title}}" >
+		</div>
 
+
+		<div id="thumbWapper">
+			<ul id="thumbList">
+				<li ng-repeat="image in images" ng-click='setCurrentImage(image)'>
+					<img alt="{{image.description}}" ng-src="{{image.thumbnail}}" width='72px' title='{{image.title}}'>
+				</li>
+			</ul>
+		</div>
+
+		<hr>
+		{{currentImage}}
+	
+	
+	
 </body>
 </html>
